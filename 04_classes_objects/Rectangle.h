@@ -13,7 +13,10 @@
 class Rectangle {
 public:
     // A basic constructor -- we'll modernize this exact class in Task 06.
+
     Rectangle(double width, double height);
+    Rectangle();
+
 
     double area() const;
     double perimeter() const;

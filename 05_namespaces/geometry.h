@@ -11,11 +11,16 @@
 #pragma once
 
 namespace cs210 {
+
     // OUR convention: pass the radius.
     double circleArea(double radius);
+
 }
 
+
+
 namespace legacy_lib {
+
     // Imagine this is a 20-year-old library we depend on. Its author
     // made a different (and arguably worse) choice: this one takes the
     // DIAMETER. Same function name, same parameter type, completely
@@ -23,5 +28,7 @@ namespace legacy_lib {
     // exist to prevent -- the compiler will never let you call one
     // when you meant the other, because you have to say which box
     // you're reaching into.
+
     double circleArea(double diameter);
+
 }

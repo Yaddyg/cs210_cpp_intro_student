@@ -10,8 +10,12 @@
 
 class Calculator {
 public:
+
     int add(int a, int b);
+
     double add(double a, double b);
+
     int add(int a, int b, int c);   // different arity also counts as
                                      // a different signature
+
 };
