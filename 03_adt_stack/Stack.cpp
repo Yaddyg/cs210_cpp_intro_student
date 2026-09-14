@@ -8,24 +8,53 @@
 
 #include "Stack.h"
 
+#include <iostream>
+
+Stack::Stack() {
+
+    topIndex = -1;
+
+}
+
 void Stack::push(int value) {
-    // TODO: add value to the top of data_ (vector has a method for this)
+    if (isFull()) {
+        std::cout << "Stack is full." << std::endl;
+    return;
+    }
+
+    topIndex++;
+    data[topIndex] = value;
 }
 
-void Stack::pop() {
-    // TODO: if data_ isn't empty, remove the top element
+int Stack::pop() {
+    if (isEmpty()) {
+        std::cout << "Stack is empty." << std::endl;
+        return -1;
+    }
+
+    int value = data[topIndex] = -1;
+    topIndex--;
+    return value;
+
 }
 
-int Stack::top() const {
-    // TODO: return the top element of data_
-    // undefined if empty -- callers should check isEmpty() first. We'll
-    // harden this kind of thing later in the course.
+int Stack::peek() const {
+    return data[topIndex];
+
 }
 
 bool Stack::isEmpty() const {
-    // TODO: return whether data_ has zero elements
+
+    return topIndex == -1;
+
+}
+
+bool Stack::isFull() const {
+
+    return topIndex == 99;
+
 }
 
 int Stack::size() const {
-    // TODO: return how many elements are in data_ (cast to int)
+    return topIndex + 1;
 }
