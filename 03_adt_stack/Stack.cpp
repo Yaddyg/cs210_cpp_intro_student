@@ -32,13 +32,17 @@ int Stack::pop() {
         return -1;
     }
 
-    int value = data[topIndex] = -1;
+    int value = data[topIndex];
     topIndex--;
     return value;
 
 }
 
 int Stack::peek() const {
+    if (isEmpty()) {
+        std::cout << "Stack is empty." << std::endl;
+        return -1;
+    }
     return data[topIndex];
 
 }

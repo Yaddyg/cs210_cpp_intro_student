@@ -1,4 +1,4 @@
-//First error, 10:22 PM Sep 13//
+## First error, 10:22 PM Sep 13
 
 
 // ===================[ Build | 03_adt_stack | Debug ]============================
@@ -28,3 +28,27 @@ make: *** [03_adt_stack] Error 2
 //
 
 //error caused when testing first implementation of .cpp file, it appears main had the wrong line instad of peek it was top, replaced top with peek//
+
+
+
+
+
+
+
+## Second error 
+similar time to my first error
+
+
+this is not a runtime error however, my pop function,
+
+
+
+    int value = data[topIndex] = -1;
+    topIndex--;
+    return value;
+
+
+is returning -1 when checking what value was popped instead of showing that value. 
+Fixed it by changing int value = data[topIndex] = -1; to just int value = data[topIndex];
+//
+
